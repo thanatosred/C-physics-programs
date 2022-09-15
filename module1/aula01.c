@@ -41,6 +41,6 @@ void main(){
     printf("\n A media aritmetica eh: \n %.2f", media(a,b));
     printf("\n A soma de todos os termos eh: \n %d", soma(a,b));
     printf("\n A raiz da soma dos quadrados eh: \n %.2f", r2soma(a,b));
-    plot();
+    //plot();
 }
 
