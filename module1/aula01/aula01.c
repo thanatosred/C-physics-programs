@@ -19,18 +19,16 @@ float r2soma(int a, int b){
     float c = sqrt((a*a+b*b));
     return c;
 }
-void plot(){
-    FILE *fp=NULL;
-    fp=fopen("circle.dat","w");
-    int x [] = {0};
-    int y [] = {0};
-    for (int i = 0; i < 20; i++)
-    {
-        x[i] = i;
-        y[i] = x[i]+1;
+void linearFunction(){
+    FILE *file;
+    char filename[] = "funcaoAfim.dat";
+    file = fopen(filename,"w");
+    int x,y = 0.;
+    for (x = 0.; x < 20.; x = x+1.){
+        y = x+1.;
+        fprintf(file,"%d %d\n",x,y);
+        printf("\n%d %d\n",x,y);
     } 
-    int p[20][2] = {x,y};
-    //fprintf(fp,"%lf\t %lf\n",x,y);
 }
 void main(){
     int a,b = 0;
@@ -41,6 +39,6 @@ void main(){
     printf("\n A media aritmetica eh: \n %.2f", media(a,b));
     printf("\n A soma de todos os termos eh: \n %d", soma(a,b));
     printf("\n A raiz da soma dos quadrados eh: \n %.2f", r2soma(a,b));
-    //plot();
+    linearFunction();
 }
 
