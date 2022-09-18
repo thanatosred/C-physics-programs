@@ -26,9 +26,11 @@ void lerTabela(){
     for(i=0; fscanf(file2,"%lf %lf ",&x[i],&y[i])!=EOF;i++){
         printf("%13.8f %14.8f \n",x[i],y[i]);
     }
+    printf("Dados lidos \n");
+    
     h = x[1]-x[0];
     //colocando ponto inicial
-    fprintf(file1,"%20.8lf %20.8lf \n",x[0],y[0]);
+    //fprintf(file1,"%20.8lf %20.8lf \n",x[0],y[0]);
     //adicionando pontos da derivada
     for(j=1; j<(i-1);j++){
         d1 = (y[j+1]-y[j-1])/(2.*h);
@@ -36,10 +38,11 @@ void lerTabela(){
         printf("%20.8lf %20.8lf \n",x[j],d1);
     }
     //colocando ponto final
-    fprintf(file1,"%20.8lf %20.8lf \n",x[i-1],y[i-1]);
+    //fprintf(file1,"%20.8lf %20.8lf \n",x[i-1],y[i-1]);
     fclose(file2);
+    printf("Derivadas geradas \n");
 }
 void main(){
-    //criarTabela();
-   lerTabela();
+    criarTabela();
+    lerTabela();
 }
