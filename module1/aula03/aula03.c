@@ -3,9 +3,9 @@
 //Física Computacional 1 (V3)-Introdução geral (p3)
 void cExpcAprox(int j){
     FILE *file1,*file2;
-    char filename1[] ="";
+    char filename1[100] ="";
     sprintf(filename1,"%s%d%s","cExpAprox", j,".dat");
-    char filename2[] = "cexp.dat";
+    char filename2[100] = "cexp.dat";
 
     file1 =fopen(filename1,"w");
     file2 =fopen(filename2,"w");

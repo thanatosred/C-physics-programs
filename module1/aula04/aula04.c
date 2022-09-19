@@ -5,7 +5,7 @@
 void main(){
 
     FILE *file;
-    char filename[] = "mapaLogistico.dat";
+    char filename[100] = "mapaLogistico.dat";
     file = fopen(filename,"w");
 
     double x2,x1,x0,r;

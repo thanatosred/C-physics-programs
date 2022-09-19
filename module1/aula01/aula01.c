@@ -21,7 +21,7 @@ float r2soma(int a, int b){
 }
 void linearFunction(){
     FILE *file;
-    char filename[] = "funcaoAfim.dat";
+    char filename[100] = "funcaoAfim.dat";
     file = fopen(filename,"w");
     int x,y = 0.;
     for (x = 0.; x < 20.; x = x+1.){

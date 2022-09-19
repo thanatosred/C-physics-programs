@@ -14,8 +14,8 @@ void criarTabela(){
 }
 void lerTabela(){
     FILE *file1,*file2;
-    char filename1[] = "derivada.dat";
-    char filename2[] = "dados.dat";
+    char filename1[100] = "derivada.dat";
+    char filename2[100] = "dados.dat";
     file1 = fopen(filename1,"w");
     file2 = fopen(filename2,"r");
 

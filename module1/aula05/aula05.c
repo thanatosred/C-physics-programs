@@ -3,7 +3,7 @@
 //Física Computacional 1 - Introdução Geral (p5)
 void cParabola(){
     FILE *file;
-    char filename[] = "tabela.dat";
+    char filename[100] = "tabela.dat";
     file = fopen(filename,"w");
 
     double a,b,c,delta,y,x,r1,r2,xl,xr;

@@ -3,7 +3,7 @@
 // Fisica Computacional - (V2)-Introdução geral (p2)
 void cExponential(double a, int n){
     FILE *file;
-    char filename[] = "cexponencial";
+    char filename[100] = "cexponencial";
     sprintf(filename,"%s%d%s","cexponencial", n,".dat");
     file = fopen(filename,"w");
 
@@ -18,7 +18,7 @@ void cExponential(double a, int n){
 }
 void cParabola(){
     FILE *file;
-    char filename[] = "cparabola.dat";
+    char filename[100] = "cparabola.dat";
     file = fopen(filename,"w");
 
     double y,x,a,b,c,dx;

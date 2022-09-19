@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-// Integração numérica de uma tabela de dados
+// V10 -Integração numérica de uma tabela de dados
 void criarGauss(){
   FILE *file;
   char filename[] = "dados.dat";
@@ -13,11 +13,14 @@ void criarGauss(){
   }
 }
 void integral(){
-  FILE *file1,*file2;
-  char filename1[] = "integralNUM.dat";
-  char filename2[] = "dados.dat";
+  FILE *file1,*file2,*file3;
+  char filename1[100] = "integralNUM.dat";
+  char filename2[100] = "dados.dat";
+  char filename3[100] = "dadosNormalizados.dat";
+
   file1 = fopen(filename1,"w");
   file2 = fopen(filename2,"r");
+  file3 = fopen(filename3,"w");
 
   double h,I1,x[1000],y[1000];
   int i,j;
@@ -31,6 +34,11 @@ void integral(){
   }
   fclose(file2);
   printf("O resultado da integral eh: %13.8f \n",I1);
+  //probabilidade
+  for (j = 0; j<i;j++){
+    y[j] = y[j]/I1;
+    fprintf(file3,"%13.8f %13.8f \n",x[j],y[j]);
+  }
 }
 void main(){
   criarGauss();
