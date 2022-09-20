@@ -13,7 +13,7 @@ void randomInt(){
   for(i = 1; i<=10000;i++){
     r1=rand();
     r2 = rand()%1000000;
-    fprintf(file,"%i \n",r1);
+    fprintf(file," %i \n",r1);
   }
 }
 void randomReal(){
