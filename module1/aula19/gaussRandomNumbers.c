@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-#define pi 3.14159
+#define pi 3.14159 
 #define RAN()((double)rand()/(double)(RAND_MAX))
 //Física Computacional 1 (V12) - Número aleatórios com distribuição Gaussiana
 void main(){
@@ -11,6 +11,7 @@ void main(){
   file = fopen(filename,"w");
   double r1,r2,r3,r4,r5,r6;
   srand(time(NULL));
+  //gerei o gráfico com 20000 loops pois o meu grace estava travando
   for(int i=0; i<200000;i++){
     r1 = RAN();
     r2 = RAN();

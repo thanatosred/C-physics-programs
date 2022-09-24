@@ -13,12 +13,10 @@ void criarGauss(){
   }
 }
 void integral(){
-  FILE *file1,*file2,*file3;
-  char filename1[100] = "integralNUM.dat";
+  FILE *file2,*file3;
   char filename2[100] = "dados.dat";
   char filename3[100] = "dadosNormalizados.dat";
 
-  file1 = fopen(filename1,"w");
   file2 = fopen(filename2,"r");
   file3 = fopen(filename3,"w");
 
@@ -37,7 +35,7 @@ void integral(){
   //probabilidade
   for (j = 0; j<i;j++){
     y[j] = y[j]/I1;
-    fprintf(file3,"%13.8f %13.8f \n",x[j],y[j]);
+    fprintf(file3,"%20.8f %20.8f \n",x[j],y[j]);
   }
 }
 void main(){
