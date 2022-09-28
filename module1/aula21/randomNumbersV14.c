@@ -5,6 +5,9 @@
 #define pi 3.14159 
 #define RAN()((double)rand()/(double)(RAND_MAX))
 //V14 - funcao de correlacao
+double xx[100000];
+double ngau[100000];
+double histo[1000000];
 void main (){
   FILE *file1,*file2;
   char filename1[100] = "numAleaGAU.dat";
@@ -14,9 +17,7 @@ void main (){
 
   srand(time(NULL));
   //
-  double xx[810000];
-  double ngau[810000];
-  double histo[810000];
+  
   
   int  i,cr;
   int k = 800000;
@@ -31,17 +32,19 @@ void main (){
     ngau[i]=r5;
     fprintf(file1,"%20.8g \n",r5);
   } 
-  for(cr=0;cr<=10;cr+=1){
-    r1 =0.;
+  for(cr=0;cr<=20;cr++){
+    r1 = 0.;
     r2 = 0.;
     for(i=1;i<=(k-cr);i++){
-      r1+=ngau[i]*ngau[i+cr];
+      r1+=ngau[i]*ngau[i-cr];
     }
     for(i=1;i<=k;i++){
       r2+=ngau[i];
+      printf("%20.8g %20.8g \n",r1,r2);
     }
-    r1=r1/(double)(k-cr);
-    r2 = r2/(double)(k);
-    fprintf(file2,"%20.8g %20.8g \n",((double)cr),r1-r2*r2);
+    r1=r1/(k-cr);
+    r2 = r2/(k);
+    //printf("%20.8f %20.8f \n",r1,r2);
+    fprintf(file2,"%20.8g %20.8g \n",((double)cr),(r1-r2*r2));
   }
 }
