@@ -36,14 +36,14 @@ void main (){
     r1 = 0.;
     r2 = 0.;
     for(i=1;i<(k-cr);i++){
-      r1+=ngau[i]*ngau[i-cr];
+      r1+=ngau[i]*ngau[i+cr];
     }
     for(i=1;i<=k;i++){
       r2+=ngau[i];
-      printf("%20.8g %20.8g \n",r1,r2);
+      //printf("%20.8g %20.8g \n",r1,r2);
     }
-    r1=r1/(k-cr);
-    r2 = r2/(k);
+    r1=r1/(double)(k-cr);
+    r2 = r2/(double)(k);
     //printf("%20.8f %20.8f \n",r1,r2);
     fprintf(file2,"%20.8g %20.8g \n",((double)cr),(r1-r2*r2));
   }
