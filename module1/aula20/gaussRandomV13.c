@@ -2,16 +2,14 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-#define pi 3.14159 
+#define pi M_PI 
 #define RAN()((double)rand()/(double)(RAND_MAX))
 void main(){
-    printf("a");
     FILE *file,*file2;
     char filename1[100] = "numerosaleatoriosGAU.dat";
     char filename2[100] = "histograma.dat";
     file = fopen(filename1,"w");
     file2 = fopen(filename2,"w");
-    printf("b");
     double ngau[500000];
     double r1,r2,r3,r4,r5,r6;
     

@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-#define pi 3.14159 
+#define pi M_PI
 #define RAN()((double)rand()/(double)(RAND_MAX))
 //Física Computacional 1 (V12) - Número aleatórios com distribuição Gaussiana
 void main(){
