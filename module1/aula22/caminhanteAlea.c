@@ -32,8 +32,8 @@ void main(){
       if(r1>pp){
           r2=1.;
       }
-      if (r2<pp){
-          r1=-1.;
+      if (r1<pp){
+          r2=-1.;
       }
       A[j][m] = A[j-1][m]+r2;
     }
@@ -43,14 +43,13 @@ void main(){
     r1 = 0.;
     r2 = 0.;
     r3 = 0.;
-
     for(m=1;m<=n2;m++){
       r1+=A[j][m];
-      r2 += pow(A[j][m],2);
+      r2 += pow(A[j][m],2.);
       r3+=1.;
     }
     r1 = r1/r3;
     r2 =r2/r3;
-    fprintf(file1,"%d %13.8f\n",j,sqrt(r2-r1*r1));
+    fprintf(file1,"%i %20.8g \n",j,sqrt(r2-r1*r1));
   }
 }
