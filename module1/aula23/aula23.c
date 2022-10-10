@@ -30,10 +30,12 @@ int gerar(){
     return 0;
 }
 
-int histrograma(){
-    FILE *file,*file2;
+int histograma(){
+    FILE *file,*file2,*file3;
     char filename[100];
     char filename2[100];
+    char filename3[100] = "histograma_nor";
+
 
     printf("Digite o nome do arquivo de leitura \n");
     scanf("%s",&filename);
@@ -42,12 +44,14 @@ int histrograma(){
 
     file = fopen(filename,"r");
     file2 = fopen(filename2,"w");
+    file2 = fopen(filename3,"w");
 
     int i,j,k,cont,Nmax;
     Nmax = 200000;
     double data[Nmax];
     double r1,r2,x,rmin,rmax,dx;
 
+    double norma[150],xc [150];
     //leitura do arquivo
     for(cont=1; fscanf(file,"%lf",&data[cont])!=EOF;cont++){
     }
@@ -64,21 +68,35 @@ int histrograma(){
         }
     }
     dx = (rmax-rmin)/100.;
-    for(x=dx;x<=(rmax-dx);dx+=dx){
+
+    j = 0;
+    for(x=dx;x<=(rmax-dx);x+=dx){
         r1=0.;
         for(i=1;i<=cont;i++){
-            if(fabs(data[i]-x)<0.5*dx){
+            if(fabs(data[i]-x)<=0.5*dx){
                 r1+=1.;
             }
         }
+        xc[j] = x;
+        norma[j] = r1;
+        j++;
         fprintf(file2,"%lf \n",r1);
     }
 
+    r2 = 0;
+    for(i = 1; i <= j-1; i ++){
+        r2 = r2 + (norma[i+1] + norma[i])*dx/2;
+    }
+    for(i = 1; i <= j-1; i ++){
+        norma[i] = norma[i]/r2;
+        fprintf(file3, "%20.8g %20.8g \n", xc[i], norma[i]);
+    }
+    
     return 0;
 }
 int main(){
     //gerar();
-    histrograma();
-    histrograma();
+    histograma();
+    histograma();
     return 0;
 }
