@@ -8,10 +8,11 @@ double RAN()
 {
     return ((double)rand()/((double)RAND_MAX));
 }
-void main()
+int main()
 {
-    FILE *file1, *file2;
     double RAN();
+    
+    FILE *file1, *file2;
     int i, j, m;
     int n1 = 300, n2 = 400000;
     double pp = 0.5;
@@ -70,5 +71,5 @@ void main()
         }
         fprintf(file2, "%f %f \n", cc, r4);
     }
-
+    return 0;
 }

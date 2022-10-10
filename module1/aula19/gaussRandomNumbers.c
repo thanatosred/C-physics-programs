@@ -5,7 +5,7 @@
 #define pi M_PI
 #define RAN()((double)rand()/(double)(RAND_MAX))
 //Física Computacional 1 (V12) - Número aleatórios com distribuição Gaussiana
-void main(){
+int main(){
   FILE *file;
   char filename[100] = "numerosaleatoriosGAU.dat";
   file = fopen(filename,"w");
@@ -20,4 +20,5 @@ void main(){
     r5 = r3*r4;
     fprintf(file,"%20.8g \n",r5);
   }
+  return 0;
 }  

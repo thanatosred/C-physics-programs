@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 // Fisica Computacional - (V2)-Introdução geral (p2)
-void cExponential(double a, int n){
+int cExponential(double a, int n){
     FILE *file;
     char filename[100] = "cexponencial";
     sprintf(filename,"%s%d%s","cexponencial", n,".dat");
@@ -15,8 +15,9 @@ void cExponential(double a, int n){
         y = C*(1.-exp(-a*t));
         fprintf(file,"%13.8f %13.8f\n",t,y);
     }
+    return 0;
 }
-void cParabola(){
+int cParabola(){
     FILE *file;
     char filename[100] = "cparabola.dat";
     file = fopen(filename,"w");
@@ -31,10 +32,12 @@ void cParabola(){
         y = a*(x*x)+b*x+c;
         fprintf(file,"%13.8f %13.8f\n",x,y);
     }
-    
+    return 0;    
 }
-void main(){
+int main(){
     cExponential(0.5,1);
     cExponential(0.1,2);
     cParabola();
+    return 0;
+
 }

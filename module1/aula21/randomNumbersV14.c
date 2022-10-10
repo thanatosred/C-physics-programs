@@ -8,7 +8,7 @@
 double xx[1000000];
 double ngau[1000000];
 double histo[1000000];
-void main (){
+int main (){
 
   FILE *file1,*file2;
   char filename1[100] = "numAleaGAU.dat";
@@ -47,4 +47,5 @@ void main (){
     //printf("%20.8f %20.8f \n",r1,r2);
     fprintf(file2,"%20.8g %20.8g \n",((double)cr),(r1-r2*r2));
   }
+  return 0;
 }

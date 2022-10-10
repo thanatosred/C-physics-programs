@@ -32,6 +32,7 @@ for (xx = -2.6; xx <=2.5; xx +=dx){
 fclose(partivideo06);
 */
 }
-void main(){
+int main(){
     curvaMediaArit(10);
+    return 0;
 }

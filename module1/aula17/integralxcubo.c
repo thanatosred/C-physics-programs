@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 //Mais algumas informações sobre integração
-void main(){
+int main(){
   double x,dx,r1,r2;
   double y =0.;
   dx = 0.005;
@@ -9,4 +9,5 @@ void main(){
     y += (pow(x,3)+pow(x+dx,3))*dx*0.5;
   }
   printf("Integral po trapézio: %13.8le \n Integral esperada: %13.8f \n",y,0.);
+  return 0;
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 //Física Computacional 1 (V3)-Introdução geral (p3)
-void cExpcAprox(int j){
+int cExpcAprox(int j){
     FILE *file1,*file2;
     char filename1[100] ="";
     sprintf(filename1,"%s%d%s","cExpAprox", j,".dat");
@@ -26,9 +26,10 @@ void cExpcAprox(int j){
         fprintf(file1,"%13.8f %13.8f\n",x,y);
         fprintf(file2,"%13.8f %13.8f\n",x,exp(x));
     }
-    
+    return 0;    
 }
-void main(){
+int main(){
     cExpcAprox(5);
     cExpcAprox(10);
+    return 0;
 }

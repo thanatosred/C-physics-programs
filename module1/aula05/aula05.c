@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 //Física Computacional 1 - Introdução Geral (p5)
-void cParabola(){
+int cParabola(){
     FILE *file;
     char filename[100] = "tabela.dat";
     file = fopen(filename,"w");
@@ -38,7 +38,9 @@ void cParabola(){
     }else{
         printf("A equacao nao tem solucao real\n");
     }
+    return 0;
 }
-void main(){  
+int main(){  
     cParabola();
+    return 0;
 }

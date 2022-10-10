@@ -2,7 +2,7 @@
 #include <math.h>
 //Física Computacional 1 (V4)- Introdução geral (p4)
 
-void main(){
+int main(){
 
     FILE *file;
     char filename[100] = "mapaLogistico.dat";
@@ -21,5 +21,5 @@ void main(){
             fprintf(file,"%13.8f %13.8f\n",r,x1);
         }
     }
-    
+    return 0;
 }

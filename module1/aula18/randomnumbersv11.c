@@ -4,7 +4,7 @@
 #include <time.h>
 //Física computacional 1 (V11)-Introdução aos números aleatórios(em C e Fortran)
 //valor inteiro gerado
-void randomInt(){
+int  randomInt(){
   FILE *file;
   char filename[100] = "numerosAleatoriosInteiros.dat";
   file = fopen(filename,"w");
@@ -15,8 +15,9 @@ void randomInt(){
     r2 = rand()%1000000;
     fprintf(file," %i \n",r1);
   }
+  return 0;
 }
-void randomReal(){
+int randomReal(){
   //nao é a melhor estrategia
   FILE *file;
   char filename[100] = "numerosAleatoriosReais.dat";
@@ -32,8 +33,10 @@ void randomReal(){
     r3 =r3-0.5;
     fprintf(file,"%20.8f \n",r3);
   }
+  return 0;
 }
-void main(){
+int main(){
   randomInt();
   randomReal();
+  return 0;
 }

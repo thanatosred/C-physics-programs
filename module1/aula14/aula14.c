@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 //Física Computacional 1 (V9) - derivada numérica de uma tabela dados (ATENÇÃO: olhar descrição)
-void criarTabela(){
+int criarTabela(){
     FILE *file;
     char filename[] = "dados.dat";
     file = fopen(filename,"w");
@@ -11,8 +11,9 @@ void criarTabela(){
         fprintf(file,"%13.8f %13.8f\n",x,y);
     }
     printf("Dados gerados \n");
+    return 0;
 }
-void lerTabela(){
+int lerTabela(){
     FILE *file1,*file2;
     char filename1[100] = "derivada.dat";
     char filename2[100] = "dados.dat";
@@ -41,8 +42,10 @@ void lerTabela(){
     //fprintf(file1,"%20.8lf %20.8lf \n",x[i-1],y[i-1]);
     fclose(file2);
     printf("Derivadas geradas \n");
+    return 0;
 }
-void main(){
+int main(){
     criarTabela();
     lerTabela();
+    return 0;
 }

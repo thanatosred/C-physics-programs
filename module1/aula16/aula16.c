@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 // V10 -Integração numérica de uma tabela de dados
-void criarGauss(){
+int criarGauss(){
   FILE *file;
   char filename[] = "dados.dat";
   file = fopen(filename,"w");
@@ -11,8 +11,9 @@ void criarGauss(){
     y = exp(-x*x);
     fprintf(file,"%13.8f %13.8f \n",x,y);
   }
+  return 0;
 }
-void integral(){
+int integral(){
   FILE *file2,*file3;
   char filename2[100] = "dados.dat";
   char filename3[100] = "dadosNormalizados.dat";
@@ -37,8 +38,10 @@ void integral(){
     y[j] = y[j]/I1;
     fprintf(file3,"%20.8f %20.8f \n",x[j],y[j]);
   }
+  return 0;
 }
-void main(){
+int main(){
   criarGauss();
   integral();
+  return 0;
 }

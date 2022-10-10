@@ -19,7 +19,7 @@ float r2soma(int a, int b){
     float c = sqrt((a*a+b*b));
     return c;
 }
-void linearFunction(){
+int linearFunction(){
     FILE *file;
     char filename[100] = "funcaoAfim.dat";
     file = fopen(filename,"w");
@@ -29,8 +29,9 @@ void linearFunction(){
         fprintf(file,"%d %d\n",x,y);
         printf("\n%d %d\n",x,y);
     } 
+    return 0;
 }
-void main(){
+int main(){
     int a,b = 0;
     printf("Digite um numero inteiro: \n");
     scanf("%d", &a);
@@ -40,5 +41,6 @@ void main(){
     printf("\n A soma de todos os termos eh: \n %d", soma(a,b));
     printf("\n A raiz da soma dos quadrados eh: \n %.2f", r2soma(a,b));
     linearFunction();
+    return 0;
 }
 

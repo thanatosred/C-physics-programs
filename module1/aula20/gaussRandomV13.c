@@ -4,7 +4,7 @@
 #include <time.h>
 #define pi M_PI 
 #define RAN()((double)rand()/(double)(RAND_MAX))
-void main(){
+int main(){
     FILE *file,*file2;
     char filename1[100] = "numerosaleatoriosGAU.dat";
     char filename2[100] = "histograma.dat";
@@ -33,4 +33,5 @@ void main(){
         }
         fprintf(file2,"%20.8g %20.8g \n",r1,r2);
     }
+    return 0;
 }

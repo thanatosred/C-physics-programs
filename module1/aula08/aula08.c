@@ -2,7 +2,7 @@
 #include <math.h>
 #include <complex.h>
 
-void introComplex(){
+int introComplex(){
     //Física Computacional 1 (V5)- Números complexos em C (introdução geral)
     double r1,r2,r3,r4;
     double _Complex c1,c2,c3;
@@ -32,9 +32,9 @@ void introComplex(){
     r1 = creal(c3);
     r2 = cimag(c3);
     printf("5-exponencial de c3 \n A parte real: %lf A parte complexa: %lf\n",r1,r2);
-
+    return 0;
 }
-void exercComplex(){
+int exercComplex(){
     //Física Computacional 1 - Números complexos em Fortran (P2)
     double _Complex c[11] ={};
     double r1,r2;
@@ -50,9 +50,10 @@ void exercComplex(){
     r1 = creal(cs);
     r2 = cimag(cs);
     printf("2- A parte real: %lf A parte complexa: %lf\n",r1,r2);
-
+    return 0;
 }
-void main(){
+int main(){
     introComplex();
     exercComplex();
+    return 0;
 }
