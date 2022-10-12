@@ -23,8 +23,8 @@ int main (){
   double r1,r2,r3,r4,r5,r6;
 
   for(i=1;i<k;i++){
-    r1 = RAN();
-    r2 = RAN();
+    r1 = RAND();
+    r2 = RAND();
     r3 = sqrt(-2.*log(r1));
     r4 = cos(2.*pi*r2);
     r5 =r3*r4;
