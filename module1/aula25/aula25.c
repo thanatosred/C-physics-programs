@@ -9,7 +9,7 @@
 
 int main(){
     FILE *file;
-    char filename[100] = "n_aleatorios.dat";
+    char filename[100] = "numerosaleatoriosocorre.dat";
     file = fopen(filename, "w");
 
     int i, k, N;
