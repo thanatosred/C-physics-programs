@@ -24,11 +24,12 @@ int main(){
 
     alpha = 3.;
 
-    for (i = 1; i <= N; i++){
+    for (i = 1; i <= (N/2); i++){
         phi[i] = 2.*pi*RAND();
     }
     printf("E_n's calculados");
 
+    m1 = m2 = 0.;
     for (i = 1; i <= N; i++){
         ir = (double)i;
         epsi[i] = 0.;
@@ -37,7 +38,7 @@ int main(){
             kr = (double)k;
             r1 = pow(kr, alpha*0.5);
             r1 = 1./r1;
-            r2 = cos(2.*pi*ir*kr/(NR+phi[k]));
+            r2 = cos((2.*pi*ir*kr/NR)+phi[k]);
             epsi[i] += r1*r2;
         }
       
