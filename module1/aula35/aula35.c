@@ -1,15 +1,15 @@
+//Física computacional (1 e 2 ) - Médias de dados da participação em função de k (mais exemplos)
 #include <dirent.h>
 #include <stdio.h>
 /*
 Cálculo da média de diversas tabelas de dados (Fis. Comp. 1, 2 e métodos numéricos da PPG)
-Fiz o código, mas n consegui rodar devido a formatação do arquivo
 */
 int main(){
     DIR *dc;
     struct dirent *dir[20];
     dc = opendir(".");//abrir diretorio atual
     double x[1000],y[1000];
-    double a,xm,ym;
+    double a[1000],xm,ym;
     int i, count;
     if(dc!=NULL){
         count = 1;
@@ -32,8 +32,8 @@ int main(){
         }
     }
     for(int j = 1; j <=i; j++){
-        y[j] = y[j]/((double) count);
-        //printf("%lf %lf \n",x[j],y[j]);
+        a[j] = y[j]/((double) count);
+        printf("%lf %lf \n",x[j],a[j]);
     }
     return 0;
 }
