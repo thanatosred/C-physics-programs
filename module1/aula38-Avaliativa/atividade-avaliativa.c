@@ -9,7 +9,7 @@ int main(){
   FILE *file;
   char filename[100] = "grate.dat";
   file = fopen(filename,"w"); 
-  int N = 300;
+  int N = 320;
   int i,j;
   printf("valor: %i \n",N);
   //malha no presente
@@ -17,6 +17,7 @@ int main(){
   //malha no futuro
   int fgrade[N][N];
 
+  N = 300;
   int inf0 = N/2;
   double prob;
   int time;
@@ -24,7 +25,6 @@ int main(){
   time = N;
   printf("valor: %i \n",time);
 
-  N--;
   for(i=1; i<N;i++){
     for(j=1; i<(N); j++){
       grade[i][j] = 0;
