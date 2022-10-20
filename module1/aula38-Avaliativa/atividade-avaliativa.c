@@ -24,8 +24,9 @@ int main(){
   time = N;
   printf("valor: %i \n",time);
 
+  N--;
   for(i=1; i<N;i++){
-    for(j=1; i<N; j++){
+    for(j=1; i<(N); j++){
       grade[i][j] = 0;
       fgrade[i][j] = 0;
     }
@@ -52,8 +53,8 @@ int main(){
       }
     }
     //substituindo a grade
-    for(i=1;i<=N;i++){
-      for(j=1;j<=N;j++){       
+    for(i=1;i< N;i++){
+      for(j=1;j< N;j++){       
         grade[i][j] = fgrade[i][j];
         fprintf(file,"%i \n",grade[i][j]);
       }
