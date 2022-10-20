@@ -17,7 +17,6 @@ int main(){
   //malha no futuro
   int fgrade[N][N];
 
-  N = 300;
   int inf0 = N/2;
   double prob;
   int time;
