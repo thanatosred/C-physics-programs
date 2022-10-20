@@ -6,6 +6,9 @@
 # define RAND()((double)rand()/(double)(RAND_MAX))
 
 int main(){
+  FILE *file;
+  char filename[100] = "grate.dat";
+  file = fopen(filename,"w"); 
   int N = 300;
   int i,j;
   printf("valor: %i \n",N);
@@ -47,11 +50,11 @@ int main(){
     }
     //substituindo a grade
     for(i=1;i<=N;i++){
-      for(j=1;j<=N;j++){
+      for(j=1;j<=N;j++){       
         grade[i][j] = fgrade[i][j];
+        fprintf(file,"%i \n",grade[i][j]);
       }
     }
-    printf("valor: %i \n",grade[N][N]);
   }
   return 0;
 }
