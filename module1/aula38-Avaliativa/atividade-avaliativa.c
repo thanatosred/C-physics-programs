@@ -26,7 +26,7 @@ int main(){
   printf("valor: %i \n",time);
 
   for(i=1; i<N;i++){
-    for(j=1; i<(N); j++){
+    for(j=1; j<(N); j++){
       grade[i][j] = 0;
       fgrade[i][j] = 0;
     }
