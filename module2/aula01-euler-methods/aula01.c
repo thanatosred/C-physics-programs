@@ -5,13 +5,13 @@
 int main(){
   FILE *file,*file2;
   char filename[100] = "cteste.dat";
-  char filename2[100] = "cteste2.dat";
+  char filename2[100] = "cteste4.dat";
   file = fopen(filename, "w");
   file2 = fopen(filename2,"w");
 
   double f1,f2,g,dx,x0,x,xm;
   x0 =0.;
-  dx = 0.2;
+  dx = 0.01;
   xm = 10.;
   f1 = 1.;
   for(x=x0+dx;x<=xm;x+=dx){
