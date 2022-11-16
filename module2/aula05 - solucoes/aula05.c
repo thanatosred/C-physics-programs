@@ -5,7 +5,7 @@
 #define pi M_PI
 
 int main(){
-    FILE *file,*file2;
+    FILE *file;
     char filename[100];
 
     double vx0,vx,m,k,dt,t,tm,t0;
